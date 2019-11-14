@@ -9,6 +9,7 @@ Ext.application({
     extend: 'IVMSFront.Application',
 
     requires: [
+        'IVMSFront.view.auth.login',
         'IVMSFront.view.main.Main',
         'IVMSFront.view.line.index'
     ],
