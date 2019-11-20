@@ -16,11 +16,10 @@ Ext.define('IVMSFront.view.role.create',{
     modal: true,
     autoShow: true,
     title: 'Nuevo Rol',
-    width: 300,
-    bodyPadding: 10,
 
     items: [{
         xtype:'form',
+        bodyPadding: 10,
         items: [{
             xtype: 'hiddenfield',
             name: 'id',

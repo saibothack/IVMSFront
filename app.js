@@ -11,14 +11,19 @@ Ext.application({
     requires: [
         'IVMSFront.view.auth.login',
         'IVMSFront.view.main.Main',
-        'IVMSFront.view.line.index'
+        'IVMSFront.view.line.index',
+        'IVMSFront.view.product.index',
+        'IVMSFront.view.origin.index',
+        'IVMSFront.view.vehicle.index',
+        'IVMSFront.view.home.index',
+        'IVMSFront.view.vehicle.status.index'
     ],
 
     // The name of the initial view to create. With the classic toolkit this class
     // will gain a "viewport" plugin if it does not extend Ext.Viewport. With the
     // modern toolkit, the main view will be added to the Viewport.
     //
-    mainView: 'IVMSFront.view.main.Main'
+    //mainView: 'IVMSFront.view.home.index'
 
     //-------------------------------------------------------------------------
     // Most customizations should be made to IVMSFront.Application. If you need to

@@ -9,6 +9,23 @@ Ext.define('IVMSFront.view.main.MainController', {
 
     alias: 'controller.main',
 
+    init: function() {
+        var roleItem = this.lookupReference('roleItem');
+        var originItem = this.lookupReference('originItem');
+        var productnItem = this.lookupReference('productnItem');
+
+        var obj = Ext.decode(IVMSFront.util.Globals.getUserConfiguration());
+
+        if (obj != null){
+            if (obj.role.name == 'Super Administrador') {
+
+                roleItem.hide();
+                originItem.setVisible(false);
+                productnItem.setVisible(false);
+            }
+        }
+    },
+
     onItemSelected: function (sender, record) {
         Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
     },

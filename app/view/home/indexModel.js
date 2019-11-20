@@ -1,6 +1,6 @@
-Ext.define('IVMSFront.view.indexModel', {
+Ext.define('IVMSFront.view.home.indexModel', {
     extend: 'Ext.app.ViewModel',
-    alias: 'viewmodel.index',
+    alias: 'viewmodel.home-index',
     data: {
         name: 'IVMSFront'
     }

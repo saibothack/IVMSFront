@@ -17,10 +17,10 @@ Ext.define('IVMSFront.view.line.create',{
     autoShow: true,
     title: 'Nueva Linea',
     width: 300,
-    bodyPadding: 10,
 
     items: [{
         xtype:'form',
+        bodyPadding: 12,
         items: [{
             xtype: 'hiddenfield',
             name: 'id',

@@ -15,12 +15,13 @@ Ext.define('IVMSFront.view.role.index',{
 
     session: true,
 
+    anchor: '100% 100%',
     viewConfig: {
         forceFit: true
     },
-
-    region: 'center',
+    autoHeight    : false,
     layout    : 'fit',
+    region    : 'center',
 
     title: 'Roles',
     plugins: 'gridfilters',
@@ -30,6 +31,7 @@ Ext.define('IVMSFront.view.role.index',{
     },
 
     tbar: ['->',{
+        iconCls: 'x-fa fa-plus',
         text: 'Nuevo Rol',
         handler: 'onAddClick'
     }],

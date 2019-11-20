@@ -2,6 +2,15 @@ Ext.define('IVMSFront.view.user.createModel', {
     extend: 'Ext.app.ViewModel',
     alias: 'viewmodel.user-create',
 
+    formulas: {
+    	token: {
+    		get: function (get) {
+	            var sToken = IVMSFront.util.Globals.getToken();
+	            return sToken;
+            },
+    	}
+    },
+
     stores: {
         RoleList: {
             model: 'IVMSFront.model.Role',
@@ -12,7 +21,8 @@ Ext.define('IVMSFront.view.user.createModel', {
 		    proxy: {
 		        type: 'ajax',
 		         headers : {
-			        'Content-Type' : 'application/json;charset=utf-8'
+			        'Content-Type' : 'application/json;charset=utf-8',
+			        'Authorization': 'Bearer {token}'
 			    },
 		        noCache:false,
 		        url: IVMSFront.util.Globals.getServerPath() + 'IVMSBackRoles/User',

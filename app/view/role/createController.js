@@ -23,6 +23,9 @@ Ext.define('IVMSFront.view.role.createController', {
             Ext.Ajax.request({
                 url:  url,
                 method: method,
+                headers : {
+                    'Authorization': 'Bearer ' + localStorage.getItem("Token")
+                },
                 jsonData: {
                     id: id,
                     name: name

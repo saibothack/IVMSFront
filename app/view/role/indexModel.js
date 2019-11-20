@@ -1,7 +1,16 @@
 Ext.define('IVMSFront.view.role.indexModel', {
     extend: 'Ext.app.ViewModel',
     alias: 'viewmodel.role-index',
-    
+
+    formulas: {
+    	token: {
+    		get: function (get) {
+	            var sToken = IVMSFront.util.Globals.getToken();
+	            return sToken;
+            },
+    	}
+    },
+
     stores: {
         RoleListPagingStore: {
         	storeId: 'store-role',
@@ -15,7 +24,7 @@ Ext.define('IVMSFront.view.role.indexModel', {
 		    proxy: {
 		        type: 'ajax',
 		         headers : {
-			        'Content-Type' : 'application/json;charset=utf-8'
+			        'Authorization': 'Bearer {token}'
 			    },
 		        noCache:false,
 		        url: IVMSFront.util.Globals.getServerPath() + 'IVMSBackRoles',
@@ -28,8 +37,13 @@ Ext.define('IVMSFront.view.role.indexModel', {
 		        listeners : {
 		            exception : function(proxy, response, operation) {
 		                if (!operation.success) {
-		                    var obj = Ext.decode(response.responseText);
-		                    Ext.Msg.alert('Error Role Store', obj.message);
+		                	console.log(response.responseText);
+		                	if ((response.responseText != 'undefined') && (response.responseText != null) && (response.responseText != ''))  {
+		                		var obj = Ext.decode(response.responseText);
+		                    	Ext.Msg.alert('Error Role Store', obj.message);
+		                	} else {
+		                		Ext.Msg.alert('Error Role Store', 'Error de red');
+		                	}
 		                }
 		            }
 		        }

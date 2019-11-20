@@ -5,20 +5,18 @@ Ext.define('IVMSFront.view.auth.loginController', {
     onLoginClick: function(bntSave) {
     	currentThis = this;
 
-    	formLine = bntSave.up('form');
+    	formLogin = bntSave.up('form');
 
-    	if (formLine.isValid()) {
-			formLine.submit({
+    	if (formLogin.isValid()) {
+
+			formLogin.submit({
 				success: function(form, action) {
 					localStorage.setItem("LoggedIn", true);
 					localStorage.setItem("Token", action.result.token);
+                    localStorage.setItem("User", JSON.stringify(action.result.user));
 
 			        currentThis.getView().destroy();
-
-			        // Add the main view to the viewport
-			        Ext.create({
-			            xtype: 'app-main'
-			        });
+                    IVMSFront.app.setMainView('IVMSFront.view.home.index');
                 },
                 failure: function(form, action) {
                 	var obj = Ext.decode(action.response.responseText);

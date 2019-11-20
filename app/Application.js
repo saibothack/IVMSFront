@@ -33,15 +33,11 @@ Ext.define('IVMSFront.Application', {
         // Check to see the current value of the localStorage key
         loggedIn = localStorage.getItem("LoggedIn", false);
 
-        console.log(loggedIn);
-
-        // This ternary operator determines the value of the TutorialLoggedIn key.
-        // If TutorialLoggedIn isn't true, we display the login window,
-        // otherwise, we display the main view
-        Ext.create({
-            xtype: loggedIn ? 'app-main' : 'login'
-        });
-
+        if (loggedIn) {
+            this.setMainView('IVMSFront.view.home.index');
+        } else {
+            this.setMainView('IVMSFront.view.auth.login');
+        }
     },
 
     onAppUpdate: function () {

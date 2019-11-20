@@ -25,6 +25,10 @@ Ext.define('IVMSFront.view.line.indexController', {
                 Ext.Ajax.request({
                     url:  url,
                     method: 'DELETE',
+                    headers : {
+                        'Content-Type': 'application/json;charset=utf-8',
+                        'Authorization': 'Bearer ' + localStorage.getItem("Token")
+                    },
 
                     success: function(response, opts) {
                         var obj = Ext.decode(response.responseText);

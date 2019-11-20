@@ -2,15 +2,18 @@ Ext.define('IVMSFront.view.role.indexController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.role-index',
 
+    init: function() {
+        console.log('inicia roles');
+        console.log(IVMSFront.util.Globals.getToken());
+    },
+
     onAddClick: function() {
     	Ext.create('IVMSFront.view.role.create');
     },
 
     onEditClick: function(button) {
         var windowCreate = Ext.create('IVMSFront.view.role.create');
-
         var form = windowCreate.down('form');
-        console.log(button.getWidgetRecord());
         form.loadRecord(button.getWidgetRecord());
     },
 
@@ -26,6 +29,9 @@ Ext.define('IVMSFront.view.role.indexController', {
                 Ext.Ajax.request({
                     url:  url,
                     method: 'DELETE',
+                    headers : {
+                        'Authorization': 'Bearer  ' + localStorage.getItem("Token")
+                    },
 
                     success: function(response, opts) {
                         var obj = Ext.decode(response.responseText);

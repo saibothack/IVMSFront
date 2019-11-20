@@ -325,6 +325,78 @@
         "modelNamespace": "IVMSFront.model",
         "name": "User"
       }
+    },
+    "app/model/Origin.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "31d5356142a167c72422f7902f19df3c583f3249",
+      "parameters": {
+        "appName": "IVMSFront",
+        "baseClass": "Ext.data.Model",
+        "fields": "id:auto:null,name:auto:null,latitude:auto:null,longitude:auto:null",
+        "modelFileName": "Origin",
+        "modelNamespace": "IVMSFront.model",
+        "name": "Origin"
+      }
+    },
+    "app/model/Produc.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "31d5356142a167c72422f7902f19df3c583f3249",
+      "parameters": {
+        "appName": "IVMSFront",
+        "baseClass": "Ext.data.Model",
+        "fields": "id:int:null,name:auto:null",
+        "modelFileName": "Produc",
+        "modelNamespace": "IVMSFront.model",
+        "name": "Produc"
+      }
+    },
+    "app/model/Product.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "31d5356142a167c72422f7902f19df3c583f3249",
+      "parameters": {
+        "appName": "IVMSFront",
+        "baseClass": "Ext.data.Model",
+        "fields": "id:auto:null,name:auto:null",
+        "modelFileName": "Product",
+        "modelNamespace": "IVMSFront.model",
+        "name": "Product"
+      }
+    },
+    "app/model/vehicle.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "31d5356142a167c72422f7902f19df3c583f3249",
+      "parameters": {
+        "appName": "IVMSFront",
+        "baseClass": "Ext.data.Model",
+        "fields": "id:auto:null,line:auto:null,user:auto:null,plates:auto:null,model:auto:null",
+        "modelFileName": "vehicle",
+        "modelNamespace": "IVMSFront.model",
+        "name": "vehicle"
+      }
+    },
+    "app/model/Vehicle.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "31d5356142a167c72422f7902f19df3c583f3249",
+      "parameters": {
+        "appName": "IVMSFront",
+        "baseClass": "Ext.data.Model",
+        "fields": "id:auto:null,line:auto:null,user:auto:null,plates:auto:null,model:auto:null",
+        "modelFileName": "Vehicle",
+        "modelNamespace": "IVMSFront.model",
+        "name": "Vehicle"
+      }
+    },
+    "app/model/VehicleStatus.js": {
+      "source": "{modelFileName}.js.tpl.merge",
+      "version": "31d5356142a167c72422f7902f19df3c583f3249",
+      "parameters": {
+        "appName": "IVMSFront",
+        "baseClass": "Ext.data.Model",
+        "fields": "id:int:null,name:string:null",
+        "modelFileName": "VehicleStatus",
+        "modelNamespace": "IVMSFront.model",
+        "name": "VehicleStatus"
+      }
     }
   }
 }

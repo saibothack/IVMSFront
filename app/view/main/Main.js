@@ -71,6 +71,7 @@ Ext.define('IVMSFront.view.main.Main', {
                 }]
             },{
                 title: 'Roles',
+                reference: 'roleItem',
                 iconCls: 'fa-home',
                 items: [{
                     xtype: 'role-index'
@@ -78,36 +79,56 @@ Ext.define('IVMSFront.view.main.Main', {
             }, {
                 title: 'Lineas',
                 iconCls: 'fa-user',
+                reference: 'lineItem',
                 items: [{
                     xtype: 'line-index'
                 }]
             }, {
                 title: 'Usuarios',
                 iconCls: 'fa-users',
+                reference: 'userItem',
                 items: [{
                     xtype: 'user-index'
                 }]
             }, {
                 title: 'Conductores',
                 iconCls: 'fa-users',
+                reference: 'driverItem',
                 items: [{
                     xtype: 'user-index'
                 }]
             }, {
                 title: 'Vehiculos',
                 iconCls: 'fa-users',
+                reference: 'vehicleItem',
                 items: [{
-                    xtype: 'user-index'
+                    xtype: 'vehicle-index'
                 }]
             }, {
                 title: 'Origenes',
                 iconCls: 'fa-users',
+                reference: 'originItem',
                 items: [{
-                    xtype: 'user-index'
+                    xtype: 'origin-index'
                 }]
             }, {
                 title: 'Productos',
                 iconCls: 'fa-users',
+                reference: 'productnItem',
+                items: [{
+                    xtype: 'product-index'
+                }]
+            }, {
+                title: 'Remissiones',
+                iconCls: 'fa-users',
+                reference: 'remissionItem',
+                items: [{
+                    xtype: 'user-index'
+                }]
+            }, {
+                title: 'Seguimiento',
+                iconCls: 'fa-users',
+                reference: 'trackingItem',
                 items: [{
                     xtype: 'user-index'
                 }]
